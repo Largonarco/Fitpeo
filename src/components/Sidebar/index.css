@@ -1,0 +1,93 @@
+.Sidebar {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(9, 9, 69);
+}
+
+.Sidebar .Header {
+	padding: 2rem 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Sidebar .Header .Title {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.Sidebar .Header .Title .Icon {
+	margin-right: 0.5rem;
+}
+
+.Sidebar .Header .Title h1 {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.Sidebar .Header .MobileHeader {
+	display: none;
+}
+
+.Sidebar .Body {
+	padding: 1rem 1.5rem;
+}
+
+.Sidebar .Body .MenuItems {
+	display: flex;
+	flex-direction: column;
+}
+
+.Sidebar .Body .MenuItems .MenuItem {
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	border-radius: 0.3rem;
+	color: #8f94b0;
+}
+
+.Sidebar .Body .MenuItems .HghtdMenuItem {
+	background-color: #2d2d68;
+	color: #e7e7ee;
+}
+
+.Sidebar .Body .MenuItems .MenuItem .MenuItemIcon {
+	margin-right: 0.75rem;
+}
+
+.Sidebar .Body .MenuItems .MenuItem div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.MenuItemText {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+@media only screen and (max-width: 640px) {
+	.Sidebar {
+		display: none;
+	}
+
+	.Sidebar .Header .MobileHeader {
+		display: block;
+	}
+
+	.Sidebar .Header .MobileHeader .SidebarCloser {
+		height: 40px;
+		aspect-ratio: 1;
+		border: none;
+		outline: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0.25rem;
+		background-color: rgb(9, 9, 69);
+	}
+}

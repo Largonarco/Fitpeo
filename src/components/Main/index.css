@@ -1,0 +1,661 @@
+.Main {
+	flex: 10;
+	padding: 1.5rem 3rem;
+	color: black;
+	background-color: #f2f7f9;
+	overflow-y: scroll;
+}
+
+.Main .Header {
+	margin-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Main .Header .Greeting {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.Main .Header .MobileHeader {
+	display: flex;
+	align-items: center;
+}
+
+.Header .MobileHeader .SidebarOpener {
+	display: none;
+}
+
+.Header .MobileHeader .Search {
+	padding: 0.25rem;
+	display: flex;
+	align-items: center;
+	border-radius: 0.25rem;
+	color: #a7a7a7;
+	background-color: #fefefe;
+}
+
+.Header .MobileHeader .Search .Icon {
+	margin-right: 0.25rem;
+}
+
+.Header .MobileHeader .Search input {
+	margin: 0;
+	border: none;
+	outline: none;
+	color: #a7a7a7;
+	font-size: 12px;
+	background-color: #fefefe;
+}
+
+.Main .Body {
+	display: flex;
+	flex-direction: column;
+}
+
+.Main .Body .BasicStats {
+	margin-bottom: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.Body .BasicStats .BasicStat {
+	margin-right: 2rem;
+	width: calc((100% - 96px) / 4);
+	padding: 1.5rem 1rem;
+	display: flex;
+	align-items: center;
+	border-radius: 0.5rem;
+	background-color: #fff;
+}
+
+.Body .BasicStats .BasicStat:last-of-type {
+	margin-right: 0;
+}
+
+.BasicStats .BasicStat .Icon {
+	margin-right: 0.5rem;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.BasicStats .BasicStat .Details {
+	display: flex;
+	flex-direction: column;
+}
+
+.BasicStat .Details .Title {
+	font-size: 12px;
+	font-weight: 400;
+	color: #bdbdbd;
+	margin-bottom: 0.25rem;
+}
+
+.BasicStat .Details .PrimaryText {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+.BasicStat .Details .SecondaryText {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.Main .Body .GraphStats {
+	margin-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Body .GraphStats .GraphStat {
+	margin-right: 2rem;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.5rem;
+	background-color: #fff;
+}
+
+.Body .GraphStats .GraphStat:last-of-type {
+	margin-right: 0;
+}
+
+.Body .GraphStats .Overview {
+	flex: 6;
+}
+
+.Body .GraphStats .Customers {
+	flex: 2;
+}
+
+.GraphStats .Overview .Header {
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.Overview .Header .DurationSelector {
+	height: 30px;
+	padding: 0.25rem;
+	width: 100px;
+	border: none;
+	outline: none;
+	font-size: 12px;
+	color: #a0a0a2;
+	border-radius: 0.25rem;
+	background-color: #fafafe;
+}
+
+.Overview .Header div .Title {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.Overview .Header div .SubTitle {
+	font-size: 14px;
+	font-weight: 400;
+	color: #bdbdbd;
+}
+
+.Overview .Body .BarGraph {
+	display: flex;
+	height: 250px;
+	align-items: flex-end;
+}
+
+.Body .BarGraph .Bar {
+	margin-right: 1rem;
+	width: calc((100% - 11rem) / 12);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Body .BarGraph .Bar:last-of-type {
+	margin-right: 0;
+}
+
+.BarGraph .Bar div {
+	margin-bottom: 1rem;
+	width: 100%;
+	border-radius: 0.5rem;
+	background-color: #f2efff;
+}
+
+.BarGraph .HghtdBar div {
+	background-color: #5a33eb;
+}
+
+.BarGraph .Bar p {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.GraphStats .Customers .Header {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.Customers .Header .Title {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.Customers .Header .SubTitle {
+	font-size: 14px;
+	font-weight: 400;
+	color: #bdbdbd;
+}
+
+.Customers .Body .PieGraph {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Customers .Body .Pies {
+	position: relative;
+	height: 250px;
+	aspect-ratio: 1;
+	transform: rotate(-90deg);
+}
+
+.Body .PieGraph .LowerPie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	fill: #fff;
+	stroke: #f0eefc;
+	stroke-width: 30;
+}
+
+.Body .PieGraph .MidPie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	fill: transparent;
+	stroke: #643ae8;
+	stroke-width: 40;
+	stroke-dasharray: 471, 628;
+}
+
+.Body .PieGraph .UpperPie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	fill: transparent;
+	stroke: #f1469e;
+	stroke-width: 50;
+	stroke-dasharray: 63 628;
+}
+
+.Customers .Body .PieText {
+	position: absolute;
+	width: 40%;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+.Customers .Body .PieText .HghtdPieText {
+	font-size: 24px;
+	font-weight: 800;
+}
+
+.Main .Body .Products {
+	padding: 1rem 1.5rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.5rem;
+	background-color: #fff;
+}
+
+.Body .Products .Header {
+	display: flex;
+	align-items: center;
+}
+
+.Products .Header .Title {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.Products .Header .FilterOptions {
+	display: flex;
+	align-items: center;
+}
+
+.Header .FilterOptions .Search {
+	height: 30px;
+	margin-right: 1rem;
+	padding: 0.25rem;
+	display: flex;
+	align-items: center;
+	border-radius: 0.25rem;
+	color: #a7a7a7;
+	background-color: #fafafe;
+}
+
+.Header .FilterOptions .Search .Icon {
+	margin-right: 0.25rem;
+}
+
+.Header .FilterOptions .Search input {
+	margin: 0;
+	border: none;
+	outline: none;
+	color: #a7a7a7;
+	font-size: 12px;
+	background-color: #fafafe !important;
+}
+
+.Header .FilterOptions .DurationSelector {
+	height: 30px;
+	padding: 0.25rem;
+	width: 120px;
+	border: none;
+	outline: none;
+	font-size: 12px;
+	color: #a7a7a7;
+	border-radius: 0.25rem;
+	background-color: #fafafe;
+}
+
+.SoldProductList {
+	width: 100%;
+}
+
+.SoldProductList .Headings {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.SoldProductList .Headings .Info {
+	flex: 6;
+	font-size: 14px;
+	font-weight: 400;
+	color: #bdbdbd;
+}
+
+.SoldProductList .Headings .Stock {
+	flex: 1;
+	font-size: 14px;
+	font-weight: 400;
+	color: #bdbdbd;
+	text-align: center;
+}
+
+.SoldProductList .Headings .Price {
+	flex: 1;
+	font-size: 14px;
+	font-weight: 400;
+	color: #bdbdbd;
+	text-align: center;
+}
+
+.SoldProductList .Headings .Sales {
+	flex: 1;
+	font-size: 14px;
+	font-weight: 400;
+	color: #bdbdbd;
+	text-align: center;
+}
+
+.SoldProductList .SoldProducts {
+	width: 100%;
+	padding-top: 0.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.SoldProductList .SoldProducts .SoldProduct {
+	width: 100%;
+	margin: 0.5rem 0;
+	display: flex;
+}
+
+.SoldProductList .SoldProducts .SoldProduct:hover {
+	cursor: pointer;
+}
+
+.SoldProducts .SoldProduct .Info {
+	flex: 6;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+.SoldProduct .Info .Image {
+	width: 70px;
+	height: 45px;
+	border-radius: 0.25rem;
+	margin-right: 1rem;
+}
+
+.SoldProduct .Info div {
+	display: flex;
+	flex-direction: column;
+}
+
+.SoldProduct .Info div .Name {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.SoldProduct .Info div .Desc {
+	font-size: 12px;
+	font-weight: 400;
+	color: #bdbdbd;
+}
+
+.SoldProducts .SoldProduct .Stock {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.SoldProducts .SoldProduct .Stock p {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.SoldProducts .SoldProduct .Price {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.SoldProducts .SoldProduct .Price p {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.SoldProducts .SoldProduct .Sales {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.SoldProducts .SoldProduct .Sales p {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+@media only screen and (max-width: 640px) {
+	.Main {
+		padding: 1rem;
+	}
+
+	.Main .Header {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+	}
+
+	.Main .Header .Greeting {
+		font-size: 18px;
+	}
+
+	.Main .Header .MobileHeader {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	.Header .MobileHeader .SidebarOpener {
+		height: 40px;
+		aspect-ratio: 1;
+		margin-right: 1rem;
+		border: none;
+		outline: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0.25rem;
+		background-color: rgb(9, 9, 69);
+	}
+
+	.Header .MobileHeader .Search {
+		width: 100%;
+		height: 40px;
+		padding: 0.5rem;
+	}
+
+	.Header .MobileHeader .Search .Icon {
+		margin-right: 0.5rem;
+	}
+
+	.Header .MobileHeader .Search input {
+		width: 80%;
+		font-size: 14px;
+	}
+
+	.Main .Body .BasicStats {
+		flex-wrap: wrap;
+	}
+
+	.Body .BasicStats .BasicStat {
+		margin: 0;
+		margin-bottom: 1rem;
+		padding: 1rem 0.5rem;
+		width: calc((100% - 1rem) / 2);
+	}
+
+	.Body .BasicStats .BasicStat:nth-child(odd) {
+		margin-right: 1rem;
+	}
+
+	.Body .BasicStats .BasicStat:nth-last-child(-n + 2) {
+		margin-bottom: 0;
+	}
+
+	.BasicStats .BasicStat .Icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	.BasicStats .BasicStat .Icon svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.BasicStat .Details .Title {
+		font-size: 10px;
+	}
+
+	.BasicStat .Details .PrimaryText {
+		font-size: 20px;
+	}
+
+	.BasicStat .Details .SecondaryText {
+		font-size: 10px;
+	}
+
+	.Body .BarGraph .Bar p {
+		transform: rotate(-90deg);
+	}
+
+	.Main .Body .GraphStats {
+		flex-direction: column;
+	}
+
+	.Body .GraphStats .GraphStat {
+		margin: 0;
+		margin-bottom: 1rem;
+		width: 100%;
+	}
+
+	.Body .GraphStats .GraphStat:last-of-type {
+		margin: 0;
+	}
+
+	.GraphStats .Overview .Header {
+		flex-direction: row;
+	}
+
+	.Overview .Header .DurationSelector {
+		width: auto;
+		height: 30px;
+	}
+
+	.Overview .Header div .Title,
+	.Customers .Header .Title {
+		font-size: 16px;
+	}
+
+	.Overview .Header div .SubTitle,
+	.Customers .Header .SubTitle {
+		font-size: 12px;
+	}
+
+	.Body .BarGraph .Bar p {
+		font-size: 12px;
+	}
+
+	.Customers .Body .PieGraph {
+		height: auto;
+	}
+
+	.Body .Products .Header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.Products .Header .Title {
+		margin-bottom: 1rem;
+		font-size: 16px;
+	}
+
+	.Products .Header .FilterOptions {
+		width: 100%;
+	}
+
+	.Header .FilterOptions .Search {
+		height: 30px;
+	}
+
+	.Header .FilterOptions .Search input {
+		width: 80%;
+		font-size: 12px;
+	}
+
+	.Header .FilterOptions .DurationSelector {
+		width: auto;
+		height: 30px;
+	}
+
+	.SoldProductList .Headings .Info {
+		flex: 3;
+		font-size: 12px;
+	}
+
+	.SoldProductList .Headings .Stock,
+	.SoldProductList .Headings .Price,
+	.SoldProductList .Headings .Sales {
+		font-size: 12px;
+	}
+
+	.SoldProducts .SoldProduct .Info {
+		flex: 3;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.SoldProduct .Info .Image {
+		margin: 0;
+		margin-bottom: 0.25rem;
+	}
+
+	.SoldProducts .SoldProduct .Stock p,
+	.SoldProducts .SoldProduct .Price p,
+	.SoldProducts .SoldProduct .Sales p {
+		font-size: 12px;
+		text-align: center;
+	}
+}
