@@ -73,6 +73,7 @@
 @media only screen and (max-width: 640px) {
 	.Sidebar {
 		display: none;
+		z-index: 5;
 	}
 
 	.Sidebar .Header .MobileHeader {
